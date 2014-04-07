@@ -1,0 +1,7 @@
+<?php
+
+function minim_preprocess_html($vars) {
+  print '<pre>';
+  print_r($vars);
+  print '</pre>';
+}
