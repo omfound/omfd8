@@ -1,15 +1,66 @@
-{% if page.header %}
-  <div class="region region-header">
-    {{ page.header }}
-  </div>
-{% endif %}
-{% if page.content %}
-  <div class="region region-content">
-    {{ page.content }}
-  </div>
-{% endif %}
-{% if page.footer %}
-  <footer class="region region-footer">
-    {{ page.footer }}
-  </footer>
-{% endif %}
+<div class="l-container">
+
+  <header role="banner">
+    {% if logo %}
+      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
+        <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
+      </a>
+    {% endif %}
+
+   {{ page.header }}
+  </header>
+
+  {% if main_menu or secondary_menu %}
+    <nav role="navigation">
+      {{ main_menu }}
+    </nav>
+  {% endif %}
+
+  {{ messages }}
+
+  {{ page.help }}
+
+  <main role="main">
+    <a id="main-content"></a>{# link is in html.html.twig #}
+
+    <div class="l-content">
+      {{ page.highlighted }}
+
+      {{ title_prefix }}
+      {% if title %}
+        <h1>{{ title }}</h1>
+      {% endif %}
+      {{ title_suffix }}
+
+      {{ tabs }}
+
+      {% if action_links %}
+        <nav class="action-links">{{ action_links }}</nav>
+      {% endif %}
+
+      {{ page.content }}
+
+      {{ feed_icons }}
+    </div>{# /.l-content #}
+
+    {% if page.sidebar_first %}
+      <aside class="l-sidebar-first" role="complementary">
+        {{ page.sidebar_first }}
+      </aside>
+    {% endif %}
+
+    {% if page.sidebar_second %}
+      <aside class="l-sidebar-second" role="complementary">
+        {{ page.sidebar_second }}
+      </aside>
+    {% endif %}
+
+  </main>
+
+  {% if page.footer %}
+    <footer role="contentinfo">
+      {{ page.footer }}
+    </footer>
+  {% endif %}
+
+</div>{# /.l-container #}

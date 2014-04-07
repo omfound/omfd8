@@ -4,16 +4,14 @@
     {{ head }}
     <title>{{ head_title }}</title>
     {{ styles }}
+    {{ scripts }}
   </head>
   <body{{ attributes }}>
-    <div id="skip-link">
-      <a href="#main-content" class="visually-hidden focusable">
-        {{ 'Skip to main content'|t }}
-      </a>
-    </div>
+    <a href="#main-content" class="visually-hidden focusable skip-link">
+      {{ 'Skip to main content'|t }}
+    </a>
     {{ page_top }}
     {{ page }}
     {{ page_bottom }}
-    {{ scripts }}
   </body>
 </html>
