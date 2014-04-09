@@ -1,0 +1,14 @@
+<?php
+
+function omf_scroll_theme_suggestions_page_alter(array &$suggestions, array $variables) {
+  $path_info = Drupal::request()->getPathInfo();
+  switch ($path_info) {
+    case '/services':
+    case '/education':
+    case '/tools':
+    case '/':
+    case '/home':
+      $suggestions[] = 'page__scroll';
+      break;
+  }
+}

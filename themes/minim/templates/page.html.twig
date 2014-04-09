@@ -1,66 +1,37 @@
-<div class="l-container">
-
-  <header role="banner">
-    {% if logo %}
-      <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
-        <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
-      </a>
+<div class="site-container">
+  <div class="layout-standard">
+    {% include '/themes/minim/templates/header.html.twig' with {logo: logo, main_menu: main_menu, header: page.header, front_page: front_page} %}
+  
+    {% if page.content_top %}
+      {{ messages }}
+      <div class="region-content-top">
+        {{ page.content_top }}
+      </div>
+    {% endif %}
+  
+    {% if page.content %}
+      <div class="region-content">
+        {{ title_prefix }}
+        {% if title and not is_front %}
+          <h1>{{ title }}</h1>
+        {% endif %}
+        {{ title_suffix }}
+        {{ tabs }}
+        {% if action_links %}
+          <nav class="action-links">{{ action_links }}</nav>
+        {% endif %}
+        {{ page.content }}
+      </div>
+    {% endif %}
+  
+    {% if page.content_bottom %}
+      <div class="region-content-bottom">
+        {{ page.content_bottom }}
+      </div>
     {% endif %}
 
-   {{ page.header }}
-  </header>
-
-  {% if main_menu or secondary_menu %}
-    <nav role="navigation">
-      {{ main_menu }}
-    </nav>
-  {% endif %}
-
-  {{ messages }}
-
-  {{ page.help }}
-
-  <main role="main">
-    <a id="main-content"></a>{# link is in html.html.twig #}
-
-    <div class="l-content">
-      {{ page.highlighted }}
-
-      {{ title_prefix }}
-      {% if title %}
-        <h1>{{ title }}</h1>
-      {% endif %}
-      {{ title_suffix }}
-
-      {{ tabs }}
-
-      {% if action_links %}
-        <nav class="action-links">{{ action_links }}</nav>
-      {% endif %}
-
-      {{ page.content }}
-
-      {{ feed_icons }}
-    </div>{# /.l-content #}
-
-    {% if page.sidebar_first %}
-      <aside class="l-sidebar-first" role="complementary">
-        {{ page.sidebar_first }}
-      </aside>
+    {% if page.footer %}
+      {% include '/themes/minim/templates/footer.html.twig' with {footer: page.footer} %}
     {% endif %}
-
-    {% if page.sidebar_second %}
-      <aside class="l-sidebar-second" role="complementary">
-        {{ page.sidebar_second }}
-      </aside>
-    {% endif %}
-
-  </main>
-
-  {% if page.footer %}
-    <footer role="contentinfo">
-      {{ page.footer }}
-    </footer>
-  {% endif %}
-
-</div>{# /.l-container #}
+  </div>
+</div>

@@ -7,7 +7,14 @@ stylesheets:
     - css/objects.css
     - css/layout.css
     - css/media.css
+    - css/navigation.css
 regions:
   header : Header
+  content_top: Content Top
   content: Content
   footer: Footer
+  content_bottom: Content Bottom
+  services_scroll : Services Scroll
+  education_scroll : Education Scroll
+  tools_scroll : Tools Scroll
+  landing_scroll : Front Page Scroll 

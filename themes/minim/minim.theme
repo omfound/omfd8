@@ -1,5 +1,49 @@
 <?php
 
-function minim_preprocess_html($vars) {
+/**
+ * Theme includes
+ */
+$theme_path = drupal_get_path('theme', 'minim');
+require_once($theme_path . '/processors/views.inc');
+require_once($theme_path . '/processors/components.inc');
+
+function minim_preprocess_html(&$vars) {
   //just an example
+}
+
+function minim_preprocess_page(&$vars) {
+  minim_add_scroll_info($vars);
+}
+
+function minim_add_scroll_info(&$vars) {
+  $path_info = Drupal::request()->getPathInfo();
+  switch ($path_info) {
+    case '/services':
+    case '/education':
+    case '/tools':
+      $region_id = str_replace('/', '', $path_info) . '_scroll';
+      $vars['page']['scroll_type'] = array(
+        '#markup' => $region_id,
+      );
+      if (!empty($vars['page'][$region_id])) {
+        $vars['page']['scroll'] = $vars['page'][$region_id];
+      }
+      else {
+        $vars['page']['scroll'] = array();
+      }
+      break;
+
+    case '/':
+      $region_id = 'landing_scroll';
+      $vars['page']['scroll_type'] = array(
+        '#markup' => $region_id,
+      );
+      if (!empty($vars['page'][$region_id])) {
+        $vars['page']['scroll'] = $vars['page'][$region_id];
+      }
+      else {
+        $vars['page']['scroll'] = array();
+      }
+      break;
+  }
 }

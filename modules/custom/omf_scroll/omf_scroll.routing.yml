@@ -1,0 +1,24 @@
+services_scroll:
+  path: '/services'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::scrollPage'
+  requirements:
+    _permission: 'access content'
+education_scroll:
+  path: '/education'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::scrollPage'
+  requirements:
+    _permission: 'access content'
+tools_scroll:
+  path: '/tools'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::scrollPage'
+  requirements:
+    _permission: 'access content'
+landing_scroll:
+  path: '/home'
+  defaults:
+    _content: 'Drupal\omf_scroll\Controller\omfScroll::scrollPage'
+  requirements:
+    _permission: 'access content'

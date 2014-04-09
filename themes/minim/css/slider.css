@@ -1,0 +1,44 @@
+.view-feature-slides {
+  clear: left;
+}
+
+.slider-wrap {
+  position: relative;
+}
+
+.slider-box {
+  width: 200px;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 14px 12px 14px 12px;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-color: rgba(244,161,51,.8);
+}
+
+.slider-wrap img {
+  display: block;
+}
+
+#rotator-nav a:link,
+#rotator-nav a:visited {
+  display: block;
+  float: left;
+  width: 8px;
+  height: 8px;
+  border: solid 1px #CCCCCC;
+  background: #FFFFFF;
+  margin: 5px 0 0 3px;
+  text-indent: -999em;
+  border-radius: 10px;
+}
+
+#rotator-nav a:focus,
+#rotator-nav a:hover,
+#rotator-nav a.activeSlide {
+  width: 10px;
+  height: 10px;
+  border: none;
+  background: #870028;
+}

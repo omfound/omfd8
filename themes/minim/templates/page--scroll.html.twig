@@ -1,0 +1,16 @@
+<div class="site-container">
+  <div class="layout-scroll scroll-{{ page.scroll_type }}">
+    {% include '/themes/minim/templates/header.html.twig' with {logo: logo, main_menu: main_menu, header: page.header, front_page: front_page} %}
+    {{ messages }}
+
+    {% if page.scroll %}
+      <div class="scroll-content">
+        {{ page.scroll }}
+      </div>
+    {% endif %}
+  
+    {% if page.footer %}
+      {% include '/themes/minim/templates/footer.html.twig' with {footer: page.footer} %}
+    {% endif %}
+  </div>
+</div>

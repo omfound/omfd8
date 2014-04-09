@@ -1,0 +1,10 @@
+jquery.cycle:
+  remote: http://www.malsup.com/jquery/cycle
+  version: 2.9999.81
+  js:
+    libraries/jquery-cycle/jquery.cycle.all.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+    - core/drupalSettings
+    - core/jquery.once

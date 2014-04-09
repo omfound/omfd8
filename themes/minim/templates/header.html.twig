@@ -1,0 +1,19 @@
+<div class="region-header">
+  <div class="region-header">
+      {% if logo %}
+        <a href="{{ front_page }}" title="{{ 'Home'|t }}" rel="home">
+          <img src="{{ logo }}" alt="{{ 'Home'|t }}"/>
+        </a>
+      {% endif %}
+
+      {% if main_menu %}
+        <div class="main-navigation">
+          <nav role="navigation">
+            {{ main_menu }}
+          </nav>
+        </div>
+      {% endif %}
+
+      {{ header }}
+  </div>
+</div>

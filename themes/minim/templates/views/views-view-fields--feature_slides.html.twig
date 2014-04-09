@@ -1,0 +1,11 @@
+<div class="slider-wrap">
+  <div class="slider-image">
+    {{fields.field_slide_image.content}}
+  </div>
+  <div class="slider-box">
+    <h3>{{fields.title.content}}</h3>
+    {% if fields.body.content %}
+      {{fields.body.content}}
+    {% endif %}
+  </div>
+</div>
