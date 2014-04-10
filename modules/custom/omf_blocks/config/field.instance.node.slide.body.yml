@@ -1,0 +1,17 @@
+id: node.slide.body
+uuid: a6d24686-d189-4a9f-b20c-128c07c28d30
+status: true
+langcode: en
+field_uuid: e7199322-4fa2-4080-ae09-9a4afe0cec14
+field_name: body
+entity_type: node
+bundle: slide
+label: 'Overlay Text'
+description: ''
+required: false
+default_value: {  }
+default_value_function: ''
+settings:
+  text_processing: false
+  display_summary: false
+field_type: text_with_summary

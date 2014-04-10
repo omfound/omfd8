@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Implements hook_preprocess_HOOK
+ * Implements hook_preprocess_views_view_fields
  */
 function minim_preprocess_views_view_fields(&$variables) {
   $fields_rendered = '';
@@ -29,7 +29,11 @@ function minim_preprocess_views_view_fields(&$variables) {
   }
 }
 
-function minim_preprocess_views_view_fields__feature_slides(&$vars) {
+/**
+ * Implements hook_preprocess_views_view_fields__viewname
+ * Adds js & css for basic slideshow
+ */
+function minim_preprocess_views_view_fields__slides(&$vars) {
   $slider_attachments = array(
     '#attached' => array(
       'js' => array(
@@ -45,5 +49,4 @@ function minim_preprocess_views_view_fields__feature_slides(&$vars) {
   );
   drupal_render($slider_attachments);
 
-  //$vars['scripts'] = drupal_get_js();
 }

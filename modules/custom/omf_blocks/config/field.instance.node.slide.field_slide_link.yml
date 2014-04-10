@@ -1,0 +1,16 @@
+id: node.slide.field_slide_link
+uuid: 6513c555-d1fd-4d4e-a226-388f436515a2
+status: true
+langcode: en
+field_uuid: 5460fa07-0870-4375-9a02-2f74677480c4
+field_name: field_slide_link
+entity_type: node
+bundle: slide
+label: Link
+description: ''
+required: false
+default_value: {  }
+default_value_function: ''
+settings:
+  title: '0'
+field_type: link

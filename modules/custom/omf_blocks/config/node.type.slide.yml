@@ -1,0 +1,18 @@
+type: slide
+name: slide
+description: 'Slides for use in image slideshows, etc.'
+help: ''
+has_title: true
+title_label: Title
+settings:
+  node:
+    preview: 0
+    options:
+      status: true
+      promote: false
+      sticky: false
+      revision: false
+    submitted: false
+status: true
+uuid: c33513db-952e-4029-b256-865faf540aa6
+langcode: en

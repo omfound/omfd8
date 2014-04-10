@@ -1,0 +1,13 @@
+id: node.field_slide_link
+uuid: 5460fa07-0870-4375-9a02-2f74677480c4
+status: true
+langcode: en
+name: field_slide_link
+entity_type: node
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: false
+indexes: {  }

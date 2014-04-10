@@ -1,0 +1,30 @@
+id: node.slide.field_slide_image
+uuid: 454b1db0-6e27-44c5-b900-e58cee8bf7a0
+status: true
+langcode: en
+field_uuid: 84e908e0-e552-47f9-ba5e-948c6b2739b9
+field_name: field_slide_image
+entity_type: node
+bundle: slide
+label: Image
+description: ''
+required: false
+default_value: {  }
+default_value_function: ''
+settings:
+  file_directory: slides
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: ''
+  max_resolution: ''
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: false
+  title_field: true
+  title_field_required: false
+  default_image:
+    fid: null
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image
