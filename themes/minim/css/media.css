@@ -1,8 +1,0 @@
-/**
- * Place media queries here.
- */
-@media only screen and (max-width:730px) {
-  .slider-wrap .body-content {
-    display: none;
-  }
-}
